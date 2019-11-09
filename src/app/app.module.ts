@@ -11,13 +11,15 @@ import { CountriesComponent } from './countries/countries.component';
 import { HttpClientModule} from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BoundingScrollDirective } from './bounding-scroll.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     VirtualComponent,
     DragComponent,
-    CountriesComponent
+    CountriesComponent,
+    BoundingScrollDirective
   ],
   imports: [
     BrowserModule,

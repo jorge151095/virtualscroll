@@ -7,14 +7,20 @@
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  overflow: scroll;
+  overflow-X: scroll;
+}
+
+.box-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .box-h {
   display: block;
   height: 200px;
   width: 100%;
-  overflow: scroll;
+  overflow-Y: scroll;
 }
 
 .item-h {
@@ -29,29 +35,3 @@
   height: 100%;
   width: 40px;
 }
-
-
-@keyframes bounce-top {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes bounce-bottom {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes bounce-left {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(10px); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes bounce-right {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-10px); }
-  100% { transform: translateX(0); }
-}
-

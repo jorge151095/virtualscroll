@@ -25,22 +25,18 @@
 <cdk-virtual-scroll-viewport itemSize="50" class="list-container list-group">
   <div class="list-group-item" *cdkVirtualFor="let person of persons; let i = index; let count = count">
     Item {{ i }} / {{ count}}
-  </div>
+   </div>
 </cdk-virtual-scroll-viewport>
 
-<div class="box" (scroll)="scrollEvent($event, 'horizontal')">
+<div class="box" appBoundingScroll position="horizontal">
   <div class="item"
-  [@bounceRight]="bounceRight ? 'finish': 'start'"
-  [@bounceLeft]="bounceLeft ? 'finish': 'start'"
     *ngFor="let obj of objects; let i = index;">
     ITEM {{ i }}
   </div>
 </div>
 
-<div class="box-h" (scroll)="scrollEvent($event)">
+<div class="box-h" appBoundingScroll>
   <div class="item-h"
-    [@bounceTop]="bounceTop ? 'finish': 'start'"
-    [@bounceBottom]="bounceBottom ? 'finish': 'start'"
     *ngFor="let obj of objects; let i = index;">
     ITEM {{ i }}
   </div>
